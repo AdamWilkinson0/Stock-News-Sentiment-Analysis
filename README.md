@@ -7,17 +7,24 @@ There is the option to download a csv of the news data and each articles appoint
 
 **API Key:** The app prompts the user to input their [*NewsAPI*](https://newsapi.org) key.   
 If you cant make an account use the following key: 4fb7451267354239a60d10f44e037b55  
-[**Deployd App Link**](nysesentimentanalysis.up.railway.app)
+[**Deployed App Link**](nysesentimentanalysis.up.railway.app)
 
 ## Tools
-NLP Model: FinBERT (yiyanghkust/finbert-tone)  
-Graphs: Plotly  
-News & Stock Data: NewsAPI, yFinance  
-Data Organisation & Calculations: Pandas, NumPy  
-WebPage - Streamlit
+*NLP Model:* FinBERT (yiyanghkust/finbert-tone)  
+*Graphs:* Plotly  
+*News & Stock Data:* NewsAPI, yFinance  
+*Data Organisation & Calculations:* Pandas, NumPy  
+*WebPage:* Streamlit  
 
 ## Results & Considerations
-NewsAPI free tier has rate limits & limited coverage - so limited use and limited articles to analyse - resulting in sentiment being inaccurate on smaller companies due to limited news coverage.
+NewsAPI free tier has rate limits & limited coverage - so limited use and limited articles to analyse - resulting in sentiment being inaccurate on smaller companies due to limited news coverage.  
+
+Would be more accurate to aggregate data from various sources e.g. Social Media, News, Forums. As the articles published have their own biases and headline archetypes which may give a different view to the more organic public view provided by reddit posts or forums. Social media posts do present their own biases and often polar views so using a mix of all available data is best practice for future iterations.
+
+Example of strong correlation ($TSM):
+*Clear similarity in trends shows success in FinBERT analysis, and relationship between news and price.*  
+<img width="1304" height="520" alt="newplot-5" src="https://github.com/user-attachments/assets/3f20b048-9303-446b-a120-70312678d29f" />
+
 
 **Pearson Correlation Coefficient**
 Used to help mathematically understand how consistently the price & sentiment move together by calculating the strength and direction of their linear relationship.  
@@ -28,6 +35,8 @@ Used to help mathematically understand how consistently the price & sentiment mo
 - **Only Measures Trend Similarity:** The coefficient only takes into account how similar the graph trends are. Therefore, a consistently high but flat sentiment paired with a consistently growing stock price will have a low correlation, despite having a clear relationship.
 
 Example ($PANW):
+- *Has a brief dip in sentiment - a result of the API not finding many articles for this company.*  
+- *Has a (mostly) consistently high sentiment. Paired with a consistently growing stock price shows a clear link, however has almost 0 Pearson coefficient due to direction of data over time being very different, as sentiment is flat.*
 <img width="1304" height="520" alt="newplot-4" src="https://github.com/user-attachments/assets/b5b78239-7151-48eb-9772-873c68f8c328" />
 
 **Flaws in FinBERT**  
