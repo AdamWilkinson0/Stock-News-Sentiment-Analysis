@@ -124,7 +124,7 @@ col1, col2 = st.columns([2, 1])
 
 with col1:
     st.markdown(
-        "Enter a NYSE stock ticker and your NewsAPI key (key . The tool will fetch news for the last 14 days and analyze sentiment.")
+        "Enter a NYSE stock ticker and your NewsAPI key. The tool will fetch news for the last 14 days and analyze sentiment.")
     ticker = st.text_input("NYSE Ticker (e.g. AAPL, JPM, MSFT)", value="AAPL", max_chars=4)
     newsapi_key = st.text_input("NewsAPI key (find at https://newsapi.org) - leave empty to skip sentiment analysis",
                                 value="", type="password")
