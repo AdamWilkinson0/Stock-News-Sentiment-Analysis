@@ -49,6 +49,25 @@ The model evaluated the article to be extremely negative, however the content su
 | --- | --- | --- |
 Is investing in Apple stock now a no-brainer? | Discover why some experts say no stock is truly a no-brainer, as well as Apple's future investment outlook. | -4.99998825387905
 
+## Setup Guide  
+**Prerequisites**  
+- Python 3.8+
+- pip
+
+**Installation**  
+Terminal:  
+<code>git clone https://github.com/AdamWilkinson0/Stock-News-Sentiment-Analysis  
+cd Stock-News-Sentiment-Analysis</code>
+
+Install requireed libraries:
+<code>pip install -r requirements.txt</code>
+
+**Run**  
+You will need a free API key from NewsAPI.org, or use the one provided (top of page) 
+<code>streamlit run StockNewsSentiment.py</code>
+
+
+
 
 
 
