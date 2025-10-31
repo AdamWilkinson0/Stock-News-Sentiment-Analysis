@@ -8,7 +8,7 @@ There is the option to download a csv of the news data and each articles appoint
 **API Key:** The app prompts the user to input their [*NewsAPI*](https://newsapi.org) key.   
 API Key: 4fb7451267354239a60d10f44e037b55 (My API key, if needed)  
   
-<span style="color:red">Note:</span> Analysis can take 30-60 seconds due to FinBERT model processing and free hosting limitations  
+<code style="color : red">Note:</code> Analysis can take 30-60 seconds due to FinBERT model processing and free hosting limitations  
 [**Web App Link**](https://stock-news-sentiment-analysis-0.streamlit.app)
 
 ## Tools
