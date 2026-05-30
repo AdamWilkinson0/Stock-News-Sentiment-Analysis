@@ -5,8 +5,7 @@ The app uses the FinBERT NLP model to perform sentiment analysis on the inputted
 
 There is the option to download a csv of the news data and each articles appointed sentiment value, so the accuracy of the FinBERT model can be manually checked, along with the types of articles the api is returning.
 
-**API Key:** The app prompts the user to input their [*NewsAPI*](https://newsapi.org) key.   
-API Key: 4fb7451267354239a60d10f44e037b55 (My API key, if needed)  
+**API Key:** The app prompts the user to input their free [*NewsAPI*](https://newsapi.org) key.   
   
 <code style="color : red">Note: Analysis can take 30-60 seconds due to FinBERT model processing and free hosting limitations</code>  
 [**Web App Link**](https://stock-news-sentiment-analysis-0.streamlit.app)
@@ -65,7 +64,7 @@ Install required libraries:
 <code>pip install -r requirements.txt</code>
 
 **Run:**  
-You will need a free API key from NewsAPI.org, or use the one provided (top of page)  
+You will need a free API key from NewsAPI.org  
 <code>streamlit run StockNewsSentiment.py</code>
 
 

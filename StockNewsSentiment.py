@@ -16,7 +16,12 @@ from plotly.subplots import make_subplots
 @st.cache_resource(show_spinner=False)
 def load_finbert_pipeline(model_name: str = "yiyanghkust/finbert-tone"):
     # Caches FinBERT model - so no need to reload every search
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+    except Exception:
+        # finbert-tone ships no tokenizer.json; fall back to the slow tokenizer
+        # if the on-the-fly fast-tokenizer build fails in the deploy environment
+        tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
     model = AutoModelForSequenceClassification.from_pretrained(model_name)
     nlp = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer, top_k=None)
     return nlp
